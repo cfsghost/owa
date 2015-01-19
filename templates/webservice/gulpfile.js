@@ -7,6 +7,7 @@ var reactify = require('reactify');
 
 var paths = {
 	less: './src/less/*.less',
+	less_watch: './src/less/**/*.less',
 	images: './src/img/*',
 	js: './src/js/**',
 	views: [
@@ -74,7 +75,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.less, [ 'less' ]);
+	gulp.watch(paths.less_watch, [ 'less' ]);
 	gulp.watch(paths.images, [ 'images' ]);
 	gulp.watch(paths.fonts, [ 'fonts' ]);
 	gulp.watch(paths.js, [ 'js' ]);
