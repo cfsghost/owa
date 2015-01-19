@@ -1,0 +1,22 @@
+{
+  "name": "owa",
+  "version": "0.0.1",
+  "description": "Useful utility to create project",
+  "main": "owa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfsghost/owa.git"
+  },
+  "keywords": [
+    "utility"
+  ],
+  "author": "Fred Chien <cfsghost@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cfsghost/owa/issues"
+  },
+  "homepage": "https://github.com/cfsghost/owa"
+}
