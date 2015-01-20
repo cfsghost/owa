@@ -4,7 +4,7 @@ var path = require('path');
 var koa = require('koa');
 var Router = require('koa-router');
 var bodyParser = require('koa-bodyparser');
-var views = require('co-views');
+var views = require('koa-views');
 var serve = require('koa-static');
 var session = require('koa-session');
 
@@ -28,24 +28,19 @@ try {
 	process.exit(1);
 }
 
+// Create render
+app.use(views(__dirname + '/views', {
+	ext: 'jade',
+	map: {
+		html: 'jade'
+	}
+}));
+
 // Initializing session mechanism
 app.keys = settings.general.session.keys || [];
 app.use(session());
 
-// Create render
-var render = views(__dirname + '/views', { ext: 'jade' });
-
-// APIs
-var general = new Router();
-general.get('/', function *() {
-
-    this.body = yield render('index');
-});
-
-general.post('/', function *() {
-    this.body = 'done';
-});
-
-app.use(general.middleware());
+// Routes
+app.use(require('./routes/home').middleware());
 
 app.listen(3000);

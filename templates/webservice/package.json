@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/cfsghost/owa",
   "dependencies": {
-    "co-views": "^0.2.0",
     "fluxerjs": "0.0.2",
     "jade": "^1.8.1",
     "koa": "^0.13.0",
@@ -28,7 +27,7 @@
     "koa-router": "^3.7.0",
     "koa-session": "^2.0.0",
     "koa-static": "^1.4.8",
-    "react-bootstrap": "^0.13.2"
+    "koa-views": "^2.1.2"
   },
   "devDependencies": {
     "gulp": "^3.7.0",
@@ -37,6 +36,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-shell": "^0.2.11",
     "react": "^0.12.0",
-    "reactify": "^0.13.1"
+    "reactify": "^0.13.1",
+    "react-bootstrap": "^0.13.2"
   }
 }
