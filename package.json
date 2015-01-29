@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/cfsghost/owa/issues"
   },
-  "homepage": "https://github.com/cfsghost/owa"
+  "homepage": "https://github.com/cfsghost/owa",
+  "dependencies": {
+    "commander": "^2.6.0",
+    "fs-extra": "^0.16.3"
+  },
+  "bin": {
+    "owa": "./bin/owa.js",
+    "owa-init": "./bin/owa-init.js"
+  }
 }
